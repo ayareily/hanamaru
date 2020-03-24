@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand navbar-dark pink-gradient">
+<nav class="navbar navbar-expand navbar-dark blue-gradient">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>memo</a>
+  <a class="navbar-brand" href="/"><i class="far fa-heart mr-1"></i>Hanamaru</a>
 
   <ul class="navbar-nav ml-auto">
 
