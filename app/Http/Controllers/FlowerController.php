@@ -15,6 +15,7 @@ class FlowerController extends Controller
     }
 
     public function store() {
-        
+
+        return redirect()->route('articles.index');
     }
 }
