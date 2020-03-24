@@ -15,7 +15,6 @@ class CreateFlowersTable extends Migration
     {
         Schema::create('flowers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('body');
             $table->timestamps();
         });
