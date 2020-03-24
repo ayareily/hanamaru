@@ -9,4 +9,12 @@ class ArticleController extends Controller
     public function index() {
         return view('flowers.index');
     }
+
+    public function create() {
+        return view('flowers.create');
+    }
+
+    public function store() {
+        
+    }
 }
