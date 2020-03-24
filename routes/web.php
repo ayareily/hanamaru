@@ -1,9 +1,9 @@
 <?php
 
 Auth::routes();
-Route::get('/', 'ArticleController@index')->name('home');
-Route::get('articles.create', 'ArticleController@create')->name('articles.create');
-Route::post('articles.store', 'ArticleController@store')->name('articles.store');
+Route::get('/', 'FlowerController@index')->name('home');
+Route::get('flowers.create', 'FlowerController@create')->name('flowers.create');
+Route::post('flowers.store', 'FlowerController@store')->name('flowers.store');
 
 
 /*

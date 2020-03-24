@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class FlowerController extends Controller
 {
     public function index() {
         return view('flowers.index');
