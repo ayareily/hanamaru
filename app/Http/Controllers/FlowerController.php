@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\FlowerRequest;
 
 class FlowerController extends Controller
 {
@@ -14,8 +15,9 @@ class FlowerController extends Controller
         return view('flowers.create');
     }
 
-    public function store() {
-
-        return redirect()->route('articles.index');
+    public function store(FlowerRequest $request, Flower $flower) {
+        $flower->body = $request->body;
+        $flower->save();
+        return redirect()->route('home');
     }
 }

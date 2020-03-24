@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class Flower extends FormRequest
+class FlowerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class Flower extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'max:300',//
+            'body' => 'max:300',//
         ];
     }
 
