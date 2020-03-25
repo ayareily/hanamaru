@@ -5,13 +5,10 @@
 @section('content')
     @include('nav')
 
-    @foreach($flowers as $flower)
-        <article>
-            <h2>
-                    {{ $flower->body }}
-            </h2>
-        </article>
-    @endforeach
-
+    <div class="container">
+  @foreach($flowers as $flower)
+    @include('flowers.card')
+  @endforeach
+  </div>
 
 @endsection
