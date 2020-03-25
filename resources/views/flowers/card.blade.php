@@ -24,11 +24,11 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ route("flowers.edit", ['flower' => $flower]) }}">
-              <i class="fas fa-pen mr-1"></i>はなまるを編集する
+              <i class="fas fa-pen mr-1"></i>はなまる編集
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" data-toggle="modal" data-target="#modal-delete-{{ $flower->id }}">
-              <i class="fas fa-trash-alt mr-1"></i>はなまるを削除する
+              <i class="fas fa-trash-alt mr-1"></i>はなまる削除
             </a>
           </div>
         </div>
