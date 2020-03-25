@@ -24,11 +24,11 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ route("flowers.edit", ['flower' => $flower]) }}">
-              <i class="fas fa-pen mr-1"></i>記事を更新する
+              <i class="fas fa-pen mr-1"></i>はなまるを編集する
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" data-toggle="modal" data-target="#modal-delete-{{ $flower->id }}">
-              <i class="fas fa-trash-alt mr-1"></i>記事を削除する
+              <i class="fas fa-trash-alt mr-1"></i>はなまるを削除する
             </a>
           </div>
         </div>
@@ -48,7 +48,7 @@
               @csrf
               @method('DELETE')
               <div class="modal-body">
-                {{ $flower->title }}を削除します。よろしいですか？
+                {{ $flower->created_at->format('Y/m/d H:i') }}に受け取ったはなまるを削除します。よろしいですか？
               </div>
               <div class="modal-footer justify-content-between">
                 <a class="btn btn-outline-grey" data-dismiss="modal">キャンセル</a>
