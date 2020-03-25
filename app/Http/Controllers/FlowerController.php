@@ -9,21 +9,19 @@ use App\Flower;
 class FlowerController extends Controller
 {
     public function index() {
-        $flowers = Flower::all();
+        $flowers = Flower::all()->sortByDesc('created_at');
 
-        return view('flowers.index', compact('flowers'));
+        return view('flowers.index', ['flowers' => $flowers]);
     }
 
     public function create() {
         return view('flowers.create');
     }
 
-    public function store() {
-        $inputs = \Request::all();
-        Flower::create($inputs);
-        
-        //$flower->body = $request->body;
-        //$flower->save();
+    public function store(FlowerRequest $request, Flower $flower) {
+        $flower->fill($request->all());
+        $flower->user_id = $request->user()->id;
+        $flower->save();
         
         return redirect()->route('home');
     }
