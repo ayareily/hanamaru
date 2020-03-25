@@ -26,4 +26,9 @@ class FlowerController extends Controller
         return redirect()->route('home');
     }
 
+    public function edit(Flower $flower)
+    {
+        return view('flowers.edit', ['flower' => $flower]);    
+    }
+
 }
