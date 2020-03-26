@@ -4,8 +4,8 @@ Auth::routes();
 
 Route::prefix('users')->name('users.')->group(function () {
     Route::get('/{name}', 'UserController@show')->name('show');
-    Route::get('/{name}/followings', 'UserController@followings')->name('followings');
-    Route::get('/{name}/followers', 'UserController@followers')->name('followers');
+    Route::patch('/{id}/update', 'UserController@update')->name('update');
+    Route::get('/{name}/edit', 'UserController@edit')->name('edit');
     });
 
 Route::prefix('login')->name('login.')->group(function () {
