@@ -1,7 +1,7 @@
 <div class="card mt-3">
           <div class="card-body d-flex flex-row">
           <i class="fas fa-asterisk fa-3x mr-1"></i>
-
+          <div>
             <div　class="name">
             <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
                 {{ $flower->user->name }}
@@ -9,18 +9,17 @@
             <div class="font-weight-lighter">
               {{ $flower->created_at->format('Y/m/d H:i') }} 
             </div>
-        
-          <div class="body">
-            {{ $flower->body }} 
-          </div>
-        </div>
+            </div>
 
-        @if( Auth::id() === $flower->user_id )
+
+  @if( Auth::id() === $flower->user_id )
     <!-- dropdown -->
-      <div class="ml-auto card-text">
+      <div class="ml-auto card-text float-right">
         <div class="dropdown">
           <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button type="button" class="btn btn-link text-muted m-0 p-2">
             <i class="fas fa-ellipsis-v"></i>
+          </button>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ route("flowers.edit", ['flower' => $flower]) }}">
@@ -32,6 +31,7 @@
             </a>
           </div>
         </div>
+      </div>
       </div>
       <!-- dropdown -->
 
@@ -60,4 +60,11 @@
       </div>
       <!-- modal -->
     @endif
+
+    <div class="card-body pt-0">        
+    <div class="body">
+            {{ $flower->body }} 
+    </div>
+    </div>
+
 </div>
