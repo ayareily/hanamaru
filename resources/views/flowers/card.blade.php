@@ -2,9 +2,14 @@
           <div class="card-body d-flex flex-row">
           <i class="fas fa-asterisk fa-3x mr-1"></i>
           <div>
+          <div　class="nickname">
+            <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
+                {{ $flower->user->nickname }}
+            </a>
+            <br>
             <div　class="name">
             <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
-                {{ $flower->user->name }}
+                （＊{{ $flower->user->name }}）
             </a>
             <div class="font-weight-lighter">
               {{ $flower->created_at->format('Y/m/d H:i') }} 

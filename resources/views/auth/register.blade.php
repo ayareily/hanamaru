@@ -31,6 +31,11 @@
                   <input class="form-control" type="text" id="email" name="email" required value="{{ old('email') }}" >
                 </div>
                 <div class="md-form">
+                  <label for="name">ニックネーム（表示名）</label>
+                  <input class="form-control" type="text" id="nickname" name="nickname" required>
+                  <small>登録後の変更はできません：変更できるように開発中です</small>
+                </div>
+                <div class="md-form">
                   <label for="password">パスワード</label>
                   <input class="form-control" type="password" id="password" name="password" required>
                 </div>
