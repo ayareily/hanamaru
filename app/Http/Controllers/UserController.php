@@ -26,11 +26,11 @@ class UserController extends Controller
         ]);
     }
 
-    // public function update(UserRequest $request, User $user)
-    public function update($request, User $user)
+    public function update(UserRequest $request, User $user)
+    //public function update($request, User $user)
     {
-        dd($request);
-        $user->fill($request->nickname())->save();
+        //dd($request);
+        $user->fill($request->nickname)->save();
         return redirect()->route('home');
     }
 

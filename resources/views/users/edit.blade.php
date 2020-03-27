@@ -15,7 +15,7 @@
             <h2 class="h3 card-title text-center mt-2">表示名編集</h2>
           <div class="card-body pt-0">
             <div class="card-text">
-              <form method="POST" action="{{ route('users.update', ['id' => $user->id]) }}">
+              <form method="POST" action="{{ route('users.update', [ 'user' => $user ] ) }}">
                 @method('PATCH')
                 @include('users.form')
                 <button type="submit" class="btn purple-gradient btn-block">更新する</button>
