@@ -1,5 +1,5 @@
 <div class="card mt-3">
-  @if( Auth::id() === $flower->user_id )
+  @if( Auth::user('name') === $flower->foruser || Auth::id() === $flower->user_id )
 
           <div class="card-body d-flex flex-row">
           <i class="fas fa-asterisk fa-3x mr-1"></i>
@@ -16,6 +16,10 @@
               {{ $flower->created_at->format('Y/m/d H:i') }} 
             </div>
             </div>
+
+            @endif
+
+@if( Auth::id() === $flower->user_id)
 
     <!-- dropdown -->
       <div class="ml-auto card-text float-right">
