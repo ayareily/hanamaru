@@ -6,7 +6,6 @@
             <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
                 {{ $flower->user->nickname }}
             </a>
-            <br>
             <div　class="name">
             <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
                 （＊{{ $flower->user->name }}）
@@ -22,9 +21,7 @@
       <div class="ml-auto card-text float-right">
         <div class="dropdown">
           <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <button type="button" class="btn btn-link text-muted m-0 p-2">
             <i class="fas fa-ellipsis-v"></i>
-          </button>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="{{ route("flowers.edit", ['flower' => $flower]) }}">
@@ -36,7 +33,6 @@
             </a>
           </div>
         </div>
-      </div>
       </div>
       <!-- dropdown -->
 
@@ -66,6 +62,7 @@
       <!-- modal -->
     @endif
 
+</div>
     <div class="card-body pt-0">        
     <div class="body">
             {{ $flower->body }} 

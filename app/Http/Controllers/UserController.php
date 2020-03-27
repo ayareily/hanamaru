@@ -28,7 +28,6 @@ class UserController extends Controller
 
     public function update(UserRequest $request, User $user)
     {
-        //dd($request);
         $user->update($request->validated());
         return redirect()->route('home');
     }
