@@ -22,10 +22,15 @@
                   <small>英数字3〜16文字(登録後の変更はできません)</small>
                 </div>
                 <div class="md-form">
+                  <label for="name">ニックネーム（表示名）</label>
+                  <input class="form-control" type="text" id="nickname" name="nickname" required>
+                  <small>英数字3〜16文字(登録後の変更はできません：変更できるように開発中です)</small>
+                </div>
+                <div class="md-form">
                   <label for="email">メールアドレス</label>
                   <input class="form-control" type="text" id="email" name="email" value="{{ $email }}" disabled>
                 </div>
-                <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
+                <button class="btn btn-block purple-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
               </form>
             </div>
           </div>
