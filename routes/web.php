@@ -9,6 +9,13 @@ Route::patch('flowers/{flower}', 'FlowerController@update')->name('flowers.updat
 Route::get('flowers/{flower}', 'FlowerController@edit')->name('flowers.edit');
 Route::delete('flowers/{flower}', 'FlowerController@destroy')->name('flowers.destroy');
 
+Route::prefix('users')->name('users.')->group(function () {
+    Route::get('/{name}', 'UserController@show')->name('show');
+    Route::get('/{name}/likes', 'UserController@likes')->name('likes');
+    Route::get('/{name}/followings', 'UserController@followings')->name('followings');
+    Route::get('/{name}/followers', 'UserController@followers')->name('followers');
+    });
+
 
 
 /*

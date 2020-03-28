@@ -3,9 +3,9 @@
           <i class="fas fa-asterisk fa-3x mr-1"></i>
 
             <div　class="name">
-            <a href="{{ $flower->user->name }}" class="text-dark">
+            <a href="{{ route('users.show', ['name' => $flower->user->name]) }}" class="text-dark">
                 {{ $flower->user->name }}
-            
+            </a>
             <div class="font-weight-lighter">
               {{ $flower->created_at->format('Y/m/d H:i') }} 
             </div>
