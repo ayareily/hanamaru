@@ -6,7 +6,6 @@
     @include('nav')
 
     <div class="container">
-
   @foreach($flowers as $flower)
     @include('flowers.card')
   @endforeach
