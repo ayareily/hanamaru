@@ -24,6 +24,7 @@ class FlowerRequest extends FormRequest
     public function rules()
     {
         return [
+            'foruser' => 'string',
             'body' => 'max:300',//
         ];
     }

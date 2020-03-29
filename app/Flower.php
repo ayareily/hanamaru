@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Flower extends Model
 {
-    protected $fillable = ['body', 'published_at'];
+    protected $fillable = ['foruser', 'body', 'published_at'];
     protected $dates = ['published_at'];
 
     public function user(): BelongsTo
