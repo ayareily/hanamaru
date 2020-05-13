@@ -31,3 +31,4 @@
 
 ## Special Thanks
 - oratake（原案者）
+- AoiArakawa
