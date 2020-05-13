@@ -24,8 +24,10 @@
 - 大事な人に「はなまる」が届く
 - 基本的にフレンド関係になければはなまるは閲覧できない（Twitterのイメージ）
 
+### 仕様(使用技術）
+- Laravel
+- Vue.js
+- Bootstrap
+
 ## Special Thanks
 - oratake（原案者）
-- AoiArakawa
-- RyoHinata
-- TakafumiOno
